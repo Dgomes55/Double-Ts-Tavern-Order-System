@@ -3,108 +3,175 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Online Ordering</title>
+    </style>
   </head>
-  <body style="                     background-color:LemonChiffon;"> <b>
-      <div class="topnav"> <a class="active" href="file:///C:/Users/Dylan/Desktop/Double%20Ts%20Tavern%20Website/Double%20Ts%20Tavern%20Website.html">Home</a>
+  <body style="                     background-color:LemonChiffon;">
+    <b>
+      <div class="topnav">
+        <a class="active" href="file:///C:/Users/Dylan/Desktop/Double%20Ts%20Tavern%20Website/Double%20Ts%20Tavern%20Website.html">Home</a>
         <a href="file:///C:/Users/Dylan/Desktop/Double%20Ts%20Tavern%20Website/Menu.html">Menu</a>
-        <a href="file:///C:/Users/Dylan/Desktop/Double%20Ts%20Tavern%20Website/Online%20Ordering.html">Order
-          Now</a> <a href="file:///C:/Users/Dylan/Desktop/Double%20Ts%20Tavern%20Website/Contact.html">Contact</a>
-        <a href="file:///C:/Users/Dylan/Desktop/Double%20Ts%20Tavern%20Website/AboutUs.html">About
-          Us</a> </div>
+        <a href="file:///C:/Users/Dylan/Desktop/Double%20Ts%20Tavern%20Website/Online%20Ordering.html">Order Now</a>
+        <a href="file:///C:/Users/Dylan/Desktop/Double%20Ts%20Tavern%20Website/Contact.html">Contact</a>
+        <a href="file:///C:/Users/Dylan/Desktop/Double%20Ts%20Tavern%20Website/AboutUs.html">About Us</a>
+      </div>
     </b>
-    <h1 style="text-align: center;"><b>Online Ordering</b></h1>
-    <p style="text-align: center;"><br>
+    <h1 style="text-align: center;">
+      <b>Online Ordering</b>
+    </h1>
+    <p style="text-align: center;">
+      <br>
     </p>
-    <p style="text-align: center;"><br>
+    <p style="text-align: center;">
+      <br>
     </p>
-    <p> </p>
+    <p></p>
     <!-- Start of Burgers Form-->
-    <form>
-      <fieldset> <legend><strong> Burger's </strong></legend>
-        <p> <input name="Burger" value="Classic'" type="checkbox"> Classic'
-          ($11) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Burger" value="Bacon Cheese Burger'" type="checkbox">
-          Bacon Cheese Burger' ($13) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Burger" value="Double T's Burger'" type="checkbox">
-          Double T's Burger' ($18) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Burger" value="Steak Tip Sandwich'" type="checkbox">
-          Steak Tip Sandwich' ($14) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Burger" value="Double Ts Fried Chicken Sandwhich" type="checkbox">
-          Double Ts Fried Chicken Sandwhich ($13) <textarea name="quantity" cols="3"
-rows="1"> 0 </textarea></p>
-        <p><input name="Burger" value="Jordan Chicken Sandwich" type="checkbox">
-          Jordan Chicken Sandwich ($15) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Burger" value="Ultimate Chicken Sandwich" type="checkbox">
-          Ultimate Chicken Sandwich ($17) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Burger" value="Sausage Peppers + Onion Sandwhich" type="checkbox">
-          Sausage Peppers + Onion Sandwhich ($12) <textarea name="quantity" cols="3"
-rows="1"> 0 </textarea></p>
+    <form id="onlineorder">
+      <fieldset>
+        <legend>
+          <strong> Burger's </strong>
+        </legend>
+        <p>
+          <input name="Burger" value="Classic'" type="checkbox"> Classic' ($11) <textarea name="quantity" id="q0"cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Burger" value="Bacon Cheese Burger'" type="checkbox"> Bacon Cheese Burger' ($13) <textarea name="quantity" id="q1" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Burger" value="Double T's Burger'" type="checkbox"> Double T's Burger' ($18) <textarea name="quantity" id="q2" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Burger" value="Steak Tip Sandwich'" type="checkbox"> Steak Tip Sandwich' ($14) <textarea name="quantity" id="q3"  cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Burger" value="Double Ts Fried Chicken Sandwhich" type="checkbox"> Double Ts Fried Chicken Sandwhich ($13) <textarea name="quantity" id="q4" cols="3" rows="1"> 0 </textarea>
+        </p>
+        <p>
+          <input name="Burger" value="Jordan Chicken Sandwich" type="checkbox"> Jordan Chicken Sandwich ($15) <textarea name="quantity" id="q5" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Burger" value="Ultimate Chicken Sandwich" type="checkbox"> Ultimate Chicken Sandwich ($17) <textarea name="quantity" id="q6" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Burger" value="Sausage Peppers + Onion Sandwhich" type="checkbox"> Sausage Peppers + Onion Sandwhich ($12) <textarea name="quantity" id="q7" cols="3" rows="1"> 0 </textarea>
+        </p>
       </fieldset>
       <!-- Start of Entrees Form-->
-      <fieldset><legend><strong>Entrees</strong></legend>
-        <p><input name="Entree" value="TT's Famous Steak Tips'" type="checkbox">
-          TT's Famous Steak Tips' ($21.95) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Entree" value="TT's Famous Chicken Kebab" type="checkbox">
-          TT's Famous Chicken Kebab ($17.95) <textarea name="quantity" cols="3"
-rows="1">0</textarea></p>
-        <p><input name="Entree" value="Grilled Italian Hot Sausage" type="checkbox">
-          Grilled Italian Hot Sausage ($17.95) <textarea name="quantity" cols="3"
-rows="1">0</textarea></p>
-        <p><input name="Entree" value="Souvlaki" type="checkbox"> Souvlaki
-          ($18.95) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Entree" value="Double T'S Baked Haddock" type="checkbox">
-          Double T'S Baked Haddock ($18.95) <textarea name="quantity" cols="3"
-rows="1">0</textarea></p>
-        <p><input name="Entree" value="Double T'S Combo'" type="checkbox">
-          Double T'S Combo' ($24.95) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Entree" value="Armenian Platter" type="checkbox">
-          Armenian Platter ($18.95) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
+      <fieldset>
+        <legend>
+          <strong>Entrees</strong>
+        </legend>
+        <p>
+          <input name="Entree" value="TT's Famous Steak Tips'" type="checkbox"> TT's Famous Steak Tips' ($21.95) <textarea name="quantity" id="q8" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Entree" value="TT's Famous Chicken Kebab" type="checkbox"> TT's Famous Chicken Kebab ($17.95) <textarea name="quantity" id="q9" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Entree" value="Grilled Italian Hot Sausage" type="checkbox"> Grilled Italian Hot Sausage ($17.95) <textarea name="quantity" id="q10" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Entree" value="Souvlaki" type="checkbox"> Souvlaki ($18.95) <textarea name="quantity" id="q11" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Entree" value="Double T'S Baked Haddock" type="checkbox"> Double T'S Baked Haddock ($18.95) <textarea name="quantity" id="q12" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Entree" value="Double T'S Combo'" type="checkbox"> Double T'S Combo' ($24.95) <textarea name="quantity" id="q13" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Entree" value="Armenian Platter" type="checkbox"> Armenian Platter ($18.95) <textarea name="quantity" id="q14" cols="3" rows="1">0</textarea>
+        </p>
       </fieldset>
       <!-- Start of Appetizers & Starters Form-->
-      <fieldset><legend><strong>Appetizers &amp; Starters</strong></legend>
-        <p><input name="Appetizer" value="Clam Chowder" type="checkbox"> Clam
-          Chowder ($7.50) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Appetizer" value="Chicken Wings" type="checkbox">
-          Chicken Wings ($11.00) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Appetizer" value="Fried Pickles" type="checkbox"> Fried
-          Pickles ($8.00) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Appetizer" value="Fried Zucchini" type="checkbox"> Fried
-          Zucchini ($11.00) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Appetizer" value="Hummus Platter" type="checkbox">
-          Hummus Platter ($11.00) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Appetizer" value="Marlborough Putine" type="checkbox">
-          Marlborough Putine ($9.00) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Appetizer" value="Double T's Coconut Chicken Tenders" type="checkbox">
-          Double T's Coconut Chicken Tenders ($12.00) <textarea name="quantity"
-cols="3" rows="1">0</textarea></p>
-        <p><input name="Appetizer" value="Fried Pepperoni" type="checkbox">
-          Fried Pepperoni ($7.99) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Appetizer" value="Fried Ravioli" type="checkbox"> Fried
-          Ravioli ($8.99) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
+      <fieldset>
+        <legend>
+          <strong>Appetizers &amp; Starters</strong>
+        </legend>
+        <p>
+          <input name="Appetizer" value="Clam Chowder" type="checkbox"> Clam Chowder ($7.50) <textarea name="quantity" id="q15" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Appetizer" value="Chicken Wings" type="checkbox"> Chicken Wings ($11.00) <textarea name="quantity" id="q16" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Appetizer" value="Fried Pickles" type="checkbox"> Fried Pickles ($8.00) <textarea name="quantity" id="q17" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Appetizer" value="Fried Zucchini" type="checkbox"> Fried Zucchini ($11.00) <textarea name="quantity" id="q18" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Appetizer" value="Hummus Platter" type="checkbox"> Hummus Platter ($11.00) <textarea name="quantity" id="q19" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Appetizer" value="Marlborough Putine" type="checkbox"> Marlborough Putine ($9.00) <textarea name="quantity" id="20" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Appetizer" value="Double T's Coconut Chicken Tenders" type="checkbox"> Double T's Coconut Chicken Tenders ($12.00) <textarea name="quantity" id="q21" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Appetizer" value="Fried Pepperoni" type="checkbox"> Fried Pepperoni ($7.99) <textarea name="quantity" id="q22" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Appetizer" value="Fried Ravioli" type="checkbox"> Fried Ravioli ($8.99) <textarea name="quantity" id="q23" cols="3" rows="1">0</textarea>
+        </p>
       </fieldset>
       <!-- Start of Salads Form-->
-      <fieldset><legend><strong>Salads</strong></legend>
-        <p><input name="Salad" value="House Salad" type="checkbox"> House Salad
-          ($9.50) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Salad" value="Classic Caesar" type="checkbox"> Classic
-          Caesar ($9.00) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Salad" value="BLT Wedge" type="checkbox"> BLT Wedge
-          ($10.00) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
+      <fieldset>
+        <legend>
+          <strong>Salads</strong>
+        </legend>
+        <p>
+          <input name="Salad" value="House Salad" type="checkbox"> House Salad ($9.50) <textarea name="quantity" id="q24" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Salad" value="Classic Caesar" type="checkbox"> Classic Caesar ($9.00) <textarea name="quantity" id="q25" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Salad" value="BLT Wedge" type="checkbox"> BLT Wedge ($10.00) <textarea name="quantity" id="q26" cols="3" rows="1">0</textarea>
+        </p>
       </fieldset>
       <!-- Start of Sides Form-->
-      <fieldset><legend><strong>Sides</strong></legend>
-        <p><input name="Sides" value="Fries" type="checkbox"> Fries ($7.00) <textarea
-name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Sides" value="Salad" type="checkbox"> Salad ($6.00) <textarea
-name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Sides" value="Rice Pilaf" type="checkbox"> Rice Pilaf
-          ($6.00) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
-        <p><input name="Sides" value="Green Beans" type="checkbox"> Green Beans
-          ($7.00) <textarea name="quantity" cols="3" rows="1">0</textarea></p>
+      <fieldset>
+        <legend>
+          <strong>Sides</strong>
+        </legend>
+        <p>
+          <input name="Sides" value="Fries" type="checkbox"> Fries ($7.00) <textarea name="quantity" id="q27" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Sides" value="Salad" type="checkbox"> Salad ($6.00) <textarea name="quantity" id="q28" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Sides" value="Rice Pilaf" type="checkbox"> Rice Pilaf ($6.00) <textarea type="number" name="quantity" id="q29" cols="3" rows="1">0</textarea>
+        </p>
+        <p>
+          <input name="Sides" value="Green Beans" type="checkbox"> Green Beans ($7.00) <textarea name="quantity" id="q30" cols="3" rows="1">0</textarea>
+        </p>
       </fieldset>
       <br>
-      <button type="submit" formaction="FinalOrder.html"> Confirm Order </button>
+      <button type="submit" onclick="get_order()"> Confirm Order </button>
       <button type="reset">Empty Cart</button>
-      <!-- End of the Forms--> </form>
+      <!-- End of the Forms-->
+    </form>
+
+    <!--Retrieve user form input-->
+    <script type="text/javascript">
+      function get_order() {
+        const food_order = [];
+        var all = document.querySelectorAll("#onlineorder input, #onlineorder textarea");
+
+        for (var i = 0; i < all.length; i++) {
+          if (all[i].checked) {
+            var key = 'q' + i/2;
+            const temp = document.getElementById(key).value;
+            food_order.push([all[i].value,temp]);
+          }
+        }
+        console.log('     Item    Quantity');
+        for (var j = 0; j < food_order.length; j++)
+          console.log(food_order[j]);
+      }
+    </script>
   </body>
 </html>
