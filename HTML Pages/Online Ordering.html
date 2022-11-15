@@ -7,13 +7,10 @@
   </head>
   <body style="                     background-color:LemonChiffon;">
     <b>
-      <div class="topnav">
-        <a class="active" href="file:///C:/Users/Dylan/Desktop/Double%20Ts%20Tavern%20Website/Double%20Ts%20Tavern%20Website.html">Home</a>
-        <a href="file:///C:/Users/Dylan/Desktop/Double%20Ts%20Tavern%20Website/Menu.html">Menu</a>
-        <a href="file:///C:/Users/Dylan/Desktop/Double%20Ts%20Tavern%20Website/Online%20Ordering.html">Order Now</a>
-        <a href="file:///C:/Users/Dylan/Desktop/Double%20Ts%20Tavern%20Website/Contact.html">Contact</a>
-        <a href="file:///C:/Users/Dylan/Desktop/Double%20Ts%20Tavern%20Website/AboutUs.html">About Us</a>
-      </div>
+      <div class="topnav"> <a class="active" href="Double Ts Tavern Website.html">Home</a>
+        <a href="Menu.html">Menu</a>
+        <a href="Online Ordering.html">Order Now</a> <a href="Contact.html">Contact</a> <a href="AboutUs.html">About
+          Us</a> </div>
     </b>
     <h1 style="text-align: center;">
       <b>Online Ordering</b>
@@ -156,22 +153,6 @@
     </form>
 
     <!--Retrieve user form input-->
-    <script type="text/javascript">
-      function get_order() {
-        const food_order = [];
-        var all = document.querySelectorAll("#onlineorder input, #onlineorder textarea");
-
-        for (var i = 0; i < all.length; i++) {
-          if (all[i].checked) {
-            var key = 'q' + i/2;
-            const temp = document.getElementById(key).value;
-            food_order.push([all[i].value,temp]);
-          }
-        }
-        console.log('     Item    Quantity');
-        for (var j = 0; j < food_order.length; j++)
-          console.log(food_order[j]);
-      }
-    </script>
+    <script src="./JS/get_order"></script>
   </body>
 </html>

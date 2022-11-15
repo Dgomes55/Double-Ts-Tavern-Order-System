@@ -1,0 +1,15 @@
+      function get_order() {
+        const food_order = [];
+        var all = document.querySelectorAll("#onlineorder input, #onlineorder textarea");
+
+        for (var i = 0; i < all.length; i++) {
+          if (all[i].checked) {
+            var key = 'q' + i/2;
+            const temp = document.getElementById(key).value;
+            food_order.push([all[i].value,temp]);
+          }
+        }
+        console.log('     Item    Quantity');
+        for (var j = 0; j < food_order.length; j++)
+          console.log(food_order[j]);
+      }
