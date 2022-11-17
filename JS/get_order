@@ -23,4 +23,15 @@ function get_order() {
     console.log('Item,Quantity,price,quantity-price');
     for (var j = 0; j < food_order.length; j++)
     console.log(food_order[j]);
+    get_total(food_order);
+    }
+
+    function get_total(food_order){
+    let total = 0;
+        if(food_order.length >= 0 ){
+            for(let i = 0; i < food_order.length; i++){
+                total += food_order[i][3];
+            }
+            console.log('TOTAL ORDER COST =','$',total);
+        }
     }
