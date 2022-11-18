@@ -147,13 +147,21 @@
         </p>
       </fieldset>
       <br>
-      <button type="submit" onclick="get_order()"> Confirm Order </button>
-      <button type="reset">Empty Cart</button>
+      <table border = 1 id="ordertbl">
+        <tr>
+            <th>Item</td>
+            <th>Quantity</td>
+            <th>Price</td>
+            <th>Cost</td>
+        </tr>
+      </table>
+      <button type="button" onclick="get_order()"> add Item(s) </button>
+      <button type="reset" onclick="del_tbl()">Delete Item</button>
+      <button type="submit">Confirm order</button>
       <!-- End of the Forms-->
     </form>
-
     <!--Retrieve user form input-->
-    <script src="./JS/get_order"></script>
+    <script src="get_order"></script>
     
   </body>
 </html>
