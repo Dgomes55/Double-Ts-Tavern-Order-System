@@ -13,8 +13,8 @@ function get_order() {
             let menu_array = menu_item.split(','); //splits by , delim
             menu_array[1] = menu_array[1].replace('(', '').replace(')', '').replace('$', '');
 
-            quantity = parseInt(quantity);
-            menu_array[1] = parseInt(menu_array[1]);
+            quantity = parseFloat(quantity);
+            menu_array[1] = parseFloat(menu_array[1]);
             quantity_cost = quantity * menu_array[1];
 
             food_order.push([menu_array[0], quantity, menu_array[1], quantity_cost]); //push order onto stack
