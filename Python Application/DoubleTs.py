@@ -3,5 +3,70 @@ Created on Thu Nov 17 11:25am 2022
 
 @authors: Dylan Gomes & Jensen Packard
 """
+# Initalize Variables
+menu_items = ['Classic','Bacon Cheese Burger','Double Ts Burger','Steak Tip Sandwich','Double Ts Fried Chicken Sandwhich','Jordan Chicken Sandwich','Ultimate Chicken Sandwich','Sausage Peppers + Onion Sandwhich','TTs Famous Steak Tips','TTs Famous Chicken Kebab','Grilled Italian Hot Sausage','Souvlaki','Double TS Baked Haddock','Double TS Combo','Armenian Platter','Clam Chowder','Chicken Wings','Fried Pickles','Fried Zucchini','Hummus Platter','Marlborough Putine','Double Ts Coconut Chicken Tenders','Fried Pepperoni','Fried Ravioli','House Salad','Classic Caesar','BLT Wedge','Fries','Salad','Rice Pilaf','Green Beans']
 
-total_items = int
+
+# Application Design
+print("#"*30+"\n    Welcome to Double Ts Tavern\n"+"#"*30+ \
+"\nPlease Chose your Order:")
+# Declare Variables
+menu_prices = {"Classic":11.00,
+"Bacon Cheese Burger":13.00,
+"Double Ts Burger":18.00,
+"Steak Tip Sandwich":14.00,
+"Double Ts Fried Chicken Sandwhich":13.00,
+"Jordan Chicken Sandwich":15.00,
+"Ultimate Chicken Sandwich":17.00,
+"Sausage Peppers + Onion Sandwhich":12.00,
+"TTs Famous Steak Tips":21.95,
+"TTs Famous Chicken Kebab":17.95,
+"Grilled Italian Hot Sausage":17.95,
+"Souvlaki":18.95,
+"Double TS Baked Haddock":18.95,
+"Double TS Combo":24.95,
+"Armenian Platter":18.95,
+"Clam Chowder":7.50,
+"Chicken Wings":11.00,
+"Fried Pickles":8.00,
+"Fried Zucchini":11.00,
+"Hummus Platter":11.00,
+"Marlborough Putine":9.00,
+"Double Ts Coconut Chicken Tenders":12.00,
+"Fried Pepperoni":7.99,
+"Fried Ravioli":8.99,
+"House Salad":9.50,
+"Classic Caesar":9.00,
+"BLT Wedge":10.00,
+"Fries":7.00,
+"Salad":6.00,
+"Rice Pilaf":6.00,
+"Green Beans":7.00}
+# Show all menu items
+for item,price in menu_prices.items():
+        print(item.title()+" - Price: $"+str(price))
+print('#'*30)
+
+# Add items
+x = True
+total_price = 0 # total price
+orders = [] # store selected items 
+while x:
+    items = input("Enter Item Name:")
+    print("Order More or Type: done")
+    x = items
+    if x == 'done':
+        x = False
+    else:
+        total_price += (menu_prices[items])
+        orders.append(items)
+print('#'*30)
+
+
+# Final Total
+print("Items in your cart: ")
+for i in range(len(orders)):
+    print(str(i+1)+" - "+orders[i].title() +" - "+str(menu_prices[orders[i]]))
+print("Your Total Price: "+str(total_price))
+#End
+print('#'*30+"\nThanks! Order Again.\n")
