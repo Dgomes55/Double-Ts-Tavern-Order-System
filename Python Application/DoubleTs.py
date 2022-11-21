@@ -53,7 +53,7 @@ total_price = 0 # total price
 orders = [] # store selected items 
 while x:
     order = input("Enter Item Name or Number:")
-    print("To finsih your order type 'done', to view current order type 'show'")
+    print("To finish your order type 'done', to view current order type 'show'")
 
     if order.isnumeric():
         items = menu_items[int(order)]
@@ -68,6 +68,7 @@ while x:
     else:
         total_price += (menu_prices[items])
         orders.append(items)
+        print(items, 'added')
 print('#'*30)
 
 
