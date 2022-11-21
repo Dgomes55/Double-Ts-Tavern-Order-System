@@ -44,7 +44,7 @@ menu_prices = {"Classic":11.00,
 "Green Beans":7.00}
 # Show all menu items
 for item,price in menu_prices.items():
-        print(item.title()+" - Price: $"+str(price))
+        print(str(menu_items.index(item))+': ' + item.title()+" - Price: $"+str(price))
 print('#'*30)
 
 # Add items
@@ -52,8 +52,14 @@ x = True
 total_price = 0 # total price
 orders = [] # store selected items 
 while x:
-    items = input("Enter Item Name:")
+    order = input("Enter Item Name or Number:")
     print("Order More or Type: done")
+
+    if order.isnumeric():
+        items = menu_items[int(order)]
+    else:
+        items = order
+    
     x = items
     if x == 'done':
         x = False
