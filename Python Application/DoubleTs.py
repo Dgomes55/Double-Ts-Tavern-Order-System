@@ -52,7 +52,7 @@ x = True
 total_price = 0 # total price
 orders = [] # store selected items 
 while x:
-    order = input("Enter Item Name or Number, If multiple; followed by the quantity separated by a comma:")
+    order = input("Enter the Item Number, If multiple; followed by the quantity separated by a comma:")
     print("To finish your order type 'done', to view current order type 'show'")
 
     ord_split = order.split(',')
