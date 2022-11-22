@@ -52,11 +52,14 @@ x = True
 total_price = 0 # total price
 orders = [] # store selected items 
 while x:
-    order = input("Enter Item Name or Number:")
+    order = input("Enter Item Name or Number, followed by the quantity separated by a comma:")
     print("To finish your order type 'done', to view current order type 'show'")
 
-    if order.isnumeric():
-        items = menu_items[int(order)]
+    ord_split = order.split(',')
+    
+
+    if ord_split[0].isnumeric():
+        items = menu_items[int(ord_split[0])]
     else:
         items = order
     
@@ -65,17 +68,25 @@ while x:
         x = False
     elif x == 'show':
         print('current order:',orders)
+    elif len(ord_split) > 1:
+        quantity = int(ord_split[1])
+        print(quantity)
+        for i in range(quantity):
+            orders.append(items)
+            total_price +=(menu_prices[items])
+        
     else:
         total_price += (menu_prices[items])
         orders.append(items)
         print(items, 'added')
 print('#'*30)
 
+state_tax = 1.0625
 
 # Final Total
 print("Items in your cart: ")
 for i in range(len(orders)):
-    print(str(i+1)+" - "+orders[i].title() +" - "+str(menu_prices[orders[i]]))
-print("Your Total Price: "+str(total_price))
+    print(str(i+1)+" - "+orders[i].title() +" - $"+str(menu_prices[orders[i]]))
+print("Your Total Price: "+'$'+str(total_price*state_tax))
 #End
 print('#'*30+"\nThanks! Order Again.\n")
