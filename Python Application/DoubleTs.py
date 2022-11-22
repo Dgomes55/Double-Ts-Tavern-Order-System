@@ -52,7 +52,7 @@ x = True
 total_price = 0 # total price
 orders = [] # store selected items 
 while x:
-    order = input("Enter the Item Number, If multiple; followed by the quantity separated by a comma:")
+    order = input("Enter Item Number, If multiple; followed by the quantity separated by a comma:")
     print("To finish your order type 'done', to view current order type 'show'")
 
     ord_split = order.split(',')
@@ -70,7 +70,6 @@ while x:
         print('current order:',orders)
     elif len(ord_split) > 1:
         quantity = int(ord_split[1])
-        print(quantity)
         for i in range(quantity):
             orders.append(items)
             total_price +=(menu_prices[items])
