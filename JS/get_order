@@ -1,5 +1,6 @@
+var food_order = [];
+
 function get_order() {
-    const food_order = [];
     var all = document.querySelectorAll("#onlineorder input, #onlineorder textarea");
 
     for (var i = 0; i < all.length; i++) {
@@ -36,7 +37,7 @@ function get_total(food_order) {
         for (let i = 0; i < food_order.length; i++) {
             insert_tbl(food_order[i]);
         }
-
+    window.localStorage.setItem('total', total)
     }
 }
 
@@ -62,4 +63,25 @@ function del_tbl() {
     if (rows > 0) {
         tbl.deleteRow(rows);
     }
+    food_order = food_order.splice(0,rows-1); //removes item last added
+}
+
+function confirm_order(food_order){
+    window.localStorage.setItem('order', JSON.stringify(food_order));
+    location.href = "Orderconfirmation.html";
+}
+
+function retrieve_ls(){
+    order = JSON.parse(window.localStorage.getItem('order'));
+    for (let i = 0; i < order.length; i++) {
+        insert_tbl(order[i]);
+    }
+    total = parseFloat(window.localStorage.getItem('total'));
+    total *= 1.0625;
+    document.getElementById('total').innerText = total.toFixed(3);
+}
+
+function clear_ls(){
+    window.localStorage.clear();
+    window.location.reload();
 }
