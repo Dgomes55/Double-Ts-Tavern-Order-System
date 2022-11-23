@@ -4,18 +4,48 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title></title>
   </head>
-  <body style=" background-color:LemonChiffon;">
+  <style>
+  table.center {
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  </style>
+  <body style=" background-color:LemonChiffon;" onload="retrieve_ls()">
     <p> </p>
     <div class="topnav"> <a class="active" href="Double Ts Tavern Website.html">Home</a>
-      <a href="Online Ordering.html">Order Now</a> <a href="Contact.html">Contact</a> <a href="AboutUs.html">About
+      <a href="OnlineOrdering.html">Order Now</a> <a href="Contact.html">Contact</a> <a href="AboutUs.html">About
         Us</a> </div>
     <div style="text-align: center;">
       <h1><b>Order Confirmation</b></h1>
     </div>
     <div style="text-align: center;">
-      <p><b> Example Text. </b></p>
+      <p><b> Final Order </b></p>
     </div>
     <p></p>
     <img src="/Users/dylan/Desktop/System-Analysis-Design-Project/Images/Owners.jpg">
-  </body>
+    <div style="text-align:center">
+      <table border = 1 id="ordertbl" class="center">
+        <tr>
+            <th>Item</td>
+            <th>Quantity</td>
+            <th>Price</td>
+            <th>Cost</td>
+            
+        </tr>
+      </table>
+      <b>ORDER TOTAL = $</b>
+      <b id ='total'>0</b>
+
+      <form id ='custinfo'>
+        <p>First Name <input type="text"></input></p>
+        <p>Last Name <input type="text"></input></p>
+        <p>Email <input type="text"></input></p>
+        <p>Phone # <input type="text"></input></p>
+        <p>Feedback <textarea type="text"></textarea></p>
+      </form>
+    
+      <button type="button" onclick="clear_ls()">Submit</button>
+    </div>
+    <script src="get_order"></script>
+    </body>
 </html>
