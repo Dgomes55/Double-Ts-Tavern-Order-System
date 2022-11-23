@@ -152,12 +152,13 @@
             <th>Item</td>
             <th>Quantity</td>
             <th>Price</td>
-            <th>Cost</td>
+            <th>Cost</td>            
         </tr>
       </table>
       <button type="button" onclick="get_order()"> add Item(s) </button>
-      <button type="reset" onclick="del_tbl()">Delete Item</button>
-      <button type="submit">Confirm order</button>
+      <button type="button" onclick="del_tbl()">Delete Item</button>
+      <button type="button" onclick="confirm_order(food_order)">Confirm order</button>
+      
       <!-- End of the Forms-->
     </form>
     <!--Retrieve user form input-->
