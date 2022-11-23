@@ -19,7 +19,7 @@
       <h1><b>Order Confirmation</b></h1>
     </div>
     <div style="text-align: center;">
-      <p><b> Final Order </b></p>
+      <p><b> Items Ordered: </b></p>
     </div>
     <p></p>
     <div style="text-align:center">
@@ -35,12 +35,19 @@
       <b>ORDER TOTAL = $</b>
       <b id ='total'>0</b>
 
+      <form id ='paymentinfo'>
+        <p>Card Card Vendor: <input type="text"></input></p>
+        <p>Card Number: <input type="text"></input></p>
+        <p>CVV: <input type="text"></input></p>
+        <p>Billing Zip Code: <input type="text"></input></p>
+      </form>
+
       <form id ='custinfo'>
-        <p>First Name <input type="text"></input></p>
-        <p>Last Name <input type="text"></input></p>
-        <p>Email <input type="text"></input></p>
-        <p>Phone # <input type="text"></input></p>
-        <p>Feedback <textarea type="text"></textarea></p>
+        <p>First Name: <input type="text"></input></p>
+        <p>Last Name: <input type="text"></input></p>
+        <p>Email: <input type="text"></input></p>
+        <p>Phone #: <input type="text"></input></p>
+        <p>Feedback: <textarea type="text"></textarea></p>
       </form>
     
       <button type="button" onclick="clear_ls()">Submit</button>
