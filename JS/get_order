@@ -1,0 +1,87 @@
+var food_order = [];
+
+function get_order() {
+    var all = document.querySelectorAll("#onlineorder input, #onlineorder textarea");
+
+    for (var i = 0; i < all.length; i++) {
+        if (all[i].checked && all.length > 0) {
+            let key = 'q' + i / 2; //key to access quantity id
+            let key_p = key + 'p'; //key to access <p> menu item
+            let quantity = document.getElementById(key).value;
+
+            let menu_item = document.getElementById(key_p).textContent;
+            menu_item = menu_item.replace(/\s+/g, ''); //removes whitespace from grabbed item
+            let menu_array = menu_item.split(','); //splits by , delim
+            menu_array[1] = menu_array[1].replace('(', '').replace(')', '').replace('$', '');
+
+            quantity = parseFloat(quantity);
+            menu_array[1] = parseFloat(menu_array[1]);
+            quantity_cost = quantity * menu_array[1];
+
+            food_order.push([menu_array[0], quantity, menu_array[1], quantity_cost]); //push order onto stack
+        }
+    }
+    console.log('Item,Quantity,price,quantity-price');
+    for (var j = 0; j < food_order.length; j++)
+        console.log(food_order[j]);
+    get_total(food_order);
+}
+
+function get_total(food_order) {
+    let total = 0;
+    if (food_order.length >= 0) {
+        for (let i = 0; i < food_order.length; i++) {
+            total += food_order[i][3];
+        }
+        console.log('TOTAL ORDER COST =', '$', total);
+        for (let i = 0; i < food_order.length; i++) {
+            insert_tbl(food_order[i]);
+        }
+    window.localStorage.setItem('total', total)
+    }
+}
+
+function insert_tbl(food_order) {
+    var tbl = document.getElementById('ordertbl');
+
+    var row = tbl.insertRow();
+    var item_c = row.insertCell();
+    var quantity_c = row.insertCell();
+    var price_c = row.insertCell();
+    var cost_c = row.insertCell();
+
+
+    item_c.innerHTML = food_order[0];
+    quantity_c.innerHTML = food_order[1];
+    price_c.innerHTML = food_order[2];
+    cost_c.innerHTML = food_order[3];
+}
+
+function del_tbl() {
+    var tbl = document.getElementById('ordertbl');
+    var rows = tbl.rows.length - 1;
+    if (rows > 0) {
+        tbl.deleteRow(rows);
+    }
+    food_order = food_order.splice(0,rows-1); //removes item last added
+}
+
+function confirm_order(food_order){
+    window.localStorage.setItem('order', JSON.stringify(food_order));
+    location.href = "Orderconfirmation.html";
+}
+
+function retrieve_ls(){
+    order = JSON.parse(window.localStorage.getItem('order'));
+    for (let i = 0; i < order.length; i++) {
+        insert_tbl(order[i]);
+    }
+    total = parseFloat(window.localStorage.getItem('total'));
+    total *= 1.0625;
+    document.getElementById('total').innerText = total.toFixed(3);
+}
+
+function clear_ls(){
+    window.localStorage.clear();
+    window.location.reload();
+}
